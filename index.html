@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serendib Odyssey | Sri Lanka Travel Guide & Curated Tour Packages</title>
+  <meta name="description" content="Discover the real Sri Lanka: Sigiriya Lion Rock, misty Ella blue trains, Galle Fort, and wild Yala safaris. Curated all-inclusive luxury tour packages and custom trip planning.">
+  <meta name="keywords" content="Sri Lanka travel guide, Sri Lanka tour packages, Sigiriya tours, Ella scenic train, Yala safari tours, Galle Fort, Ceylon holidays">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇱🇰</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" id="brandLogo">
+        <div class="brand-icon">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Serendib Odyssey</span>
+          <span class="brand-tagline">Ceylon Luxury Travel</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#destinations" id="navDestinations">Real Places</a></li>
+          <li><a href="#packages" id="navPackages">Tour Packages</a></li>
+          <li><a href="#tripPlanner" id="navTripPlanner">Trip Planner</a></li>
+          <li><a href="#experiences" id="navExperiences">Experiences</a></li>
+          <li><a href="#essentials" id="navEssentials">Island Guide</a></li>
+          <li><a href="#faqs" id="navFaqs">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions & Currency Selector -->
+      <div class="nav-actions">
+        <!-- Currency Dropdown -->
+        <div class="currency-selector">
+          <button class="currency-select-btn" id="currencyBtn" aria-label="Select Currency">
+            <i class="fa-solid fa-globe"></i>
+            <span>USD ($)</span>
+            <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i>
+          </button>
+          <div class="currency-dropdown" id="currencyDropdown">
+            <button class="currency-option selected" data-currency="USD">
+              <span>USD - US Dollar</span> <strong>$</strong>
+            </button>
+            <button class="currency-option" data-currency="EUR">
+              <span>EUR - Euro</span> <strong>€</strong>
+            </button>
+            <button class="currency-option" data-currency="GBP">
+              <span>GBP - British Pound</span> <strong>£</strong>
+            </button>
+            <button class="currency-option" data-currency="LKR">
+              <span>LKR - Sri Lankan Rupee</span> <strong>Rs</strong>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-sm trigger-booking-btn" id="headerBookBtn">
+          <i class="fa-solid fa-compass"></i> Plan My Trip
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      
+      <!-- Live Weather / Status Pill -->
+      <div class="hero-live-pill">
+        <span class="pulse-dot"></span>
+        <span><strong>Live Sri Lanka:</strong> Tropical Sunshine & Clear Skies Across the Highlands</span>
+      </div>
+
+      <h1 class="hero-title">
+        Discover the Wonder of <span class="highlight">Ceylon</span>
+      </h1>
+
+      <p class="hero-description">
+        From ancient granite fortresses in the clouds to misty tea estates, wild leopard safaris, and sun-kissed Indian Ocean shores. Experience Sri Lanka through authentic, handcrafted private journeys.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#packages" class="btn btn-primary" id="heroExploreBtn">
+          <i class="fa-solid fa-suitcase-rolling"></i> Explore Curated Packages
+        </a>
+        <a href="#tripPlanner" class="btn btn-outline-light" id="heroCalcBtn">
+          <i class="fa-solid fa-sliders"></i> Custom Trip Cost Calculator
+        </a>
+      </div>
+
+      <!-- Quick Search Bar Card -->
+      <div class="hero-search-card" id="heroSearchWidget">
+        <form id="heroSearchForm" class="search-form-grid">
+          <div class="search-field">
+            <label for="heroSearchRegion"><i class="fa-solid fa-map-location-dot"></i> Region</label>
+            <select id="heroSearchRegion">
+              <option value="all">All Regions of Sri Lanka</option>
+              <option value="heritage">Cultural Triangle (Sigiriya, Kandy)</option>
+              <option value="highlands">Central Highlands & Tea Trails</option>
+              <option value="coast">Southern Coast & Beaches</option>
+              <option value="wildlife">National Parks & Wildlife</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="heroSearchStyle"><i class="fa-solid fa-compass"></i> Travel Style</label>
+            <select id="heroSearchStyle">
+              <option value="all">Any Tour Style</option>
+              <option value="heritage">Cultural Heritage</option>
+              <option value="nature">Scenic Rail & Nature</option>
+              <option value="coast">Beach & Coastal Chill</option>
+              <option value="grand">Grand Comprehensive</option>
+              <option value="luxury">Luxury & Honeymoon</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="heroSearchDuration"><i class="fa-regular fa-clock"></i> Duration</label>
+            <select id="heroSearchDuration">
+              <option value="any">Any Duration</option>
+              <option value="5-7">5 to 7 Days (Classic)</option>
+              <option value="8-10">8 to 10 Days (Comprehensive)</option>
+              <option value="11+">11+ Days (Ultimate In-depth)</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="heroSearchMonth"><i class="fa-regular fa-calendar"></i> Month</label>
+            <select id="heroSearchMonth">
+              <option value="any">Flexible Dates</option>
+              <option value="dec-apr">Dec - Apr (South & West Coast Peak)</option>
+              <option value="may-sep">May - Sep (East Coast & Cultural Triangle)</option>
+              <option value="oct-nov">Oct - Nov (Inter-Monsoon Wildlife)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-teal search-submit-btn" id="heroSearchSubmitBtn">
+            <i class="fa-solid fa-magnifying-glass"></i> Find Tours
+          </button>
+        </form>
+      </div>
+
+      <!-- Regional Weather Ticker -->
+      <div class="weather-ticker-bar">
+        <div class="weather-chip">
+          <i class="fa-solid fa-sun"></i>
+          <span><strong>Sigiriya:</strong> 31°C Clear Skies</span>
+        </div>
+        <div class="weather-chip">
+          <i class="fa-solid fa-cloud-sun"></i>
+          <span><strong>Ella:</strong> 22°C Mountain Breeze</span>
+        </div>
+        <div class="weather-chip">
+          <i class="fa-solid fa-water"></i>
+          <span><strong>Galle:</strong> 29°C Ocean Sunset</span>
+        </div>
+        <div class="weather-chip">
+          <i class="fa-solid fa-tree"></i>
+          <span><strong>Kandy:</strong> 26°C Pleasant Mist</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TRUST & CREDIBILITY STATS BANNER
+       ======================================================================== -->
+  <section class="stats-banner" id="statsBanner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Licensed Chauffeurs</span>
+          <span class="stat-desc">SLTDA-certified English guides</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.98 ★</span>
+          <span class="stat-label">Traveler Rating</span>
+          <span class="stat-desc">Over 1,200 verified reviews</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24 / 7</span>
+          <span class="stat-label">On-Island Concierge</span>
+          <span class="stat-desc">Dedicated WhatsApp support</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Zero Risk</span>
+          <span class="stat-label">Flexible Bookings</span>
+          <span class="stat-desc">Free date changes up to 14 days</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       REAL PLACES OF SRI LANKA (DESTINATIONS SECTION)
+       ======================================================================== -->
+  <section class="destinations-section section-padding" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-location-crosshairs"></i> Real Places of Wonder</span>
+        <h2 class="section-title">Iconic Destinations of Sri Lanka</h2>
+        <p class="section-subtitle">
+          From UNESCO ancient sky citadels to misty tea valleys, colonial sea fortresses, and world-famous leopard sanctuaries. Explore the places that make Sri Lanka the pearl of the Indian Ocean.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="category-filter-nav">
+        <button class="filter-btn active" data-dest-filter="all" id="destFilterAll">
+          <i class="fa-solid fa-border-all"></i> All Places
+        </button>
+        <button class="filter-btn" data-dest-filter="heritage" id="destFilterHeritage">
+          <i class="fa-solid fa-monument"></i> Cultural Triangle
+        </button>
+        <button class="filter-btn" data-dest-filter="nature" id="destFilterNature">
+          <i class="fa-solid fa-mountain"></i> Central Highlands
+        </button>
+        <button class="filter-btn" data-dest-filter="coast" id="destFilterCoast">
+          <i class="fa-solid fa-umbrella-beach"></i> Southern Coast
+        </button>
+        <button class="filter-btn" data-dest-filter="wildlife" id="destFilterWildlife">
+          <i class="fa-solid fa-paw"></i> Wildlife Safaris
+        </button>
+      </div>
+
+      <!-- Dynamic Destinations Grid -->
+      <div class="destinations-grid" id="destinationsGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CURATED TOUR PACKAGES SECTION
+       ======================================================================== -->
+  <section class="packages-section section-padding" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-route"></i> Handcrafted Ceylon Journeys</span>
+        <h2 class="section-title">Curated Sri Lanka Tour Packages</h2>
+        <p class="section-subtitle">
+          Carefully balanced itineraries with private chauffeured luxury transport, handpicked boutique hotels, daily breakfast, and authentic insider experiences.
+        </p>
+      </div>
+
+      <!-- Package Filter Tabs -->
+      <div class="packages-filter-bar">
+        <div class="package-tabs">
+          <button class="pkg-tab-btn active" data-pkg-filter="all" id="pkgTabAll">All Packages</button>
+          <button class="pkg-tab-btn" data-pkg-filter="heritage" id="pkgTabHeritage">Cultural & Heritage</button>
+          <button class="pkg-tab-btn" data-pkg-filter="nature" id="pkgTabNature">Scenic Rail & Hills</button>
+          <button class="pkg-tab-btn" data-pkg-filter="coast" id="pkgTabCoast">Ocean & Whales</button>
+          <button class="pkg-tab-btn" data-pkg-filter="grand" id="pkgTabGrand">Grand Circuit</button>
+          <button class="pkg-tab-btn" data-pkg-filter="luxury" id="pkgTabLuxury">Romantic Luxury</button>
+        </div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">
+          <i class="fa-solid fa-shield-halved" style="color:var(--primary-teal);"></i> Best Price Guarantee • Flexible Deposit
+        </div>
+      </div>
+
+      <!-- Dynamic Packages Grid -->
+      <div class="packages-grid" id="packagesGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CUSTOM TRIP BUILDER & COST ESTIMATOR
+       ======================================================================== -->
+  <section class="calculator-section section-padding" id="tripPlanner">
+    <div class="container">
+      <div class="section-header" style="color:#ffffff;">
+        <span class="eyebrow" style="color:var(--ceylon-gold);"><i class="fa-solid fa-calculator"></i> Interactive Trip Planner</span>
+        <h2 class="section-title" style="color:#ffffff;">Tailor Your Custom Ceylon Odyssey</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">
+          Customize your duration, group size, accommodation tier, and bucket-list activities for an instant real-time quote.
+        </p>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Controls Left Card -->
+        <div class="calc-card">
+          
+          <!-- Step 1: Duration -->
+          <div class="calc-step">
+            <div class="calc-label">
+              <span><i class="fa-regular fa-clock" style="color:var(--ceylon-gold);"></i> Trip Duration</span>
+              <span class="calc-value-badge" id="calcDurationBadge">7 Days / 6 Nights</span>
+            </div>
+            <input type="range" min="3" max="14" value="7" class="range-slider" id="calcDurationSlider">
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:rgba(255,255,255,0.5); margin-top:8px;">
+              <span>3 Days (Short Escape)</span>
+              <span>7 Days (Classic)</span>
+              <span>14 Days (Grand Explorer)</span>
+            </div>
+          </div>
+
+          <!-- Step 2: Travelers -->
+          <div class="calc-step">
+            <div class="calc-label">
+              <span><i class="fa-solid fa-users" style="color:var(--ceylon-gold);"></i> Number of Travelers</span>
+              <span class="calc-value-badge" id="calcTravelersBadge">2 Travelers</span>
+            </div>
+            <input type="range" min="1" max="8" value="2" class="range-slider" id="calcTravelersSlider">
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:rgba(255,255,255,0.5); margin-top:8px;">
+              <span>1 (Solo Explorer)</span>
+              <span>2 (Couple)</span>
+              <span>4+ (Family / Small Group)</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Accommodation Tier -->
+          <div class="calc-step">
+            <div class="calc-label">
+              <span><i class="fa-solid fa-hotel" style="color:var(--ceylon-gold);"></i> Accommodation Preference</span>
+            </div>
+            <div class="option-chips-grid">
+              <div class="option-chip active tier-chip" data-tier="boutique">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>Boutique & Heritage</span>
+                <small>Charming 4-Star Gems</small>
+              </div>
+              <div class="option-chip tier-chip" data-tier="luxury">
+                <i class="fa-solid fa-crown"></i>
+                <span>5-Star Luxury Villas</span>
+                <small>Plunge Pools & Butler</small>
+              </div>
+              <div class="option-chip tier-chip" data-tier="eco">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Eco Nature Lodges</span>
+                <small>Treehouses & Forest</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Transport -->
+          <div class="calc-step">
+            <div class="calc-label">
+              <span><i class="fa-solid fa-car" style="color:var(--ceylon-gold);"></i> Private Transport Mode</span>
+            </div>
+            <div class="option-chips-grid">
+              <div class="option-chip active transport-chip" data-transport="chauffeur">
+                <i class="fa-solid fa-car-side"></i>
+                <span>Private Sedan Chauffeur</span>
+                <small>Ideal for 1-3 people</small>
+              </div>
+              <div class="option-chip transport-chip" data-transport="suv">
+                <i class="fa-solid fa-van-shuttle"></i>
+                <span>Luxury SUV / Van</span>
+                <small>Extra luggage & comfort</small>
+              </div>
+              <div class="option-chip transport-chip" data-transport="combo">
+                <i class="fa-solid fa-train"></i>
+                <span>Rail & Car Combo</span>
+                <small>Observation blue train</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Optional Add-ons -->
+          <div class="calc-step">
+            <div class="calc-label">
+              <span><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--ceylon-gold);"></i> Signature Add-On Experiences</span>
+            </div>
+            <div class="calc-addons">
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-addon-check" data-addon="balloon">
+                <span>Sunrise Hot Air Balloon Flight over Sigiriya & Lakes</span>
+                <span class="addon-price">+$220 / person</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-addon-check" data-addon="whale">
+                <span>Mirissa Private Yacht Blue Whale Watching Cruise</span>
+                <span class="addon-price">+$140 / person</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-addon-check" data-addon="ayurveda">
+                <span>3-Day Ayurvedic Rejuvenation Spa & Herbal Wellness</span>
+                <span class="addon-price">+$280 / person</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quote Summary Right Card -->
+        <div class="calc-summary-card">
+          <div class="calc-summary-header">
+            <h3 class="calc-summary-title">Your Custom Ceylon Quote</h3>
+            <p class="calc-summary-subtitle">Estimated cost breakdown based on your live preferences</p>
+          </div>
+
+          <ul class="calc-breakdown-list">
+            <li class="calc-breakdown-item">
+              <span>Duration:</span>
+              <span id="summaryDays">7 Days</span>
+            </li>
+            <li class="calc-breakdown-item">
+              <span>Party Size:</span>
+              <span id="summaryTravelers">2 Persons</span>
+            </li>
+            <li class="calc-breakdown-item">
+              <span>Selected Lodging:</span>
+              <span id="summaryTier">Boutique & Heritage</span>
+            </li>
+            <li class="calc-breakdown-item">
+              <span>Transport:</span>
+              <span id="summaryTransport">Private Sedan Chauffeur</span>
+            </li>
+            <li class="calc-breakdown-item">
+              <span>Signature Experiences:</span>
+              <span id="summaryAddonsTotal">$0</span>
+            </li>
+          </ul>
+
+          <div class="calc-total-box">
+            <span class="calc-total-label">Total Estimated Investment</span>
+            <div class="calc-total-price" id="summaryTotalPrice">$1,995</div>
+            <span class="calc-total-perperson" id="summaryPerPerson">$998 per traveler</span>
+          </div>
+
+          <button class="btn btn-primary calc-book-btn" id="bookCustomTripBtn">
+            <i class="fa-solid fa-paper-plane"></i> Book This Custom Plan
+          </button>
+          
+          <div style="margin-top:16px; font-size:0.78rem; color:var(--text-muted); text-align:center;">
+            <i class="fa-solid fa-lock" style="color:var(--primary-teal);"></i> Includes private chauffeur, fuel, highway tolls, daily gourmet breakfast & taxes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       AUTHENTIC ISLAND EXPERIENCES
+       ======================================================================== -->
+  <section class="experiences-section section-padding" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Unforgettable Moments</span>
+        <h2 class="section-title">Signature Sri Lankan Experiences</h2>
+        <p class="section-subtitle">
+          Beyond the monuments, discover the soul of Sri Lanka through deep sensory encounters and local traditions.
+        </p>
+      </div>
+
+      <div class="experiences-grid" id="experiencesGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRACTICAL TRAVEL ESSENTIALS & FAQS
+       ======================================================================== -->
+  <section class="essentials-section section-padding" id="essentials">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa-solid fa-circle-info"></i> Travel Intelligence</span>
+        <h2 class="section-title">Sri Lanka Travel Essentials</h2>
+        <p class="section-subtitle">
+          Everything you need to know before landing in paradise: visas, monsoons, etiquette, and connectivity.
+        </p>
+      </div>
+
+      <div class="essentials-grid" id="essentialsGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div id="faqs" style="margin-top: 60px;">
+        <div class="section-header" style="margin-bottom:36px;">
+          <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</span>
+          <h3 class="section-title" style="font-size:2.2rem;">Everything You Need to Know</h3>
+        </div>
+
+        <div class="faq-wrap" id="faqContainer">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CALL TO ACTION BANNER
+       ======================================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-box">
+        <span class="eyebrow" style="color:var(--ceylon-gold);"><i class="fa-solid fa-sun"></i> Your Tropical Journey Awaits</span>
+        <h2 class="cta-title">Ready to Experience Sri Lanka?</h2>
+        <p class="cta-desc">
+          Speak directly with our local Ceylon travel designers. We will curate a personalized private journey tailored exactly to your dates, passions, and budget.
+        </p>
+        <button class="btn btn-primary btn-lg trigger-booking-btn" id="ctaBannerBookBtn">
+          <i class="fa-solid fa-envelope-open-text"></i> Inquire with a Local Specialist
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom:12px;">
+            <div class="brand-icon">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">Serendib Odyssey</span>
+              <span class="brand-tagline">Ceylon Luxury Travel</span>
+            </div>
+          </div>
+          <p>
+            Official luxury destination management company for Sri Lanka. Specializing in bespoke private chauffeured tours, heritage villas, wildlife expeditions, and scenic railway adventures.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+            <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="#destinations">Sigiriya Lion Rock</a></li>
+            <li><a href="#destinations">Ella Nine Arch Bridge</a></li>
+            <li><a href="#destinations">Galle Dutch Fort</a></li>
+            <li><a href="#destinations">Sacred City of Kandy</a></li>
+            <li><a href="#destinations">Yala Leopard Safari</a></li>
+            <li><a href="#destinations">Mirissa Whale Coast</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tour Packages</h4>
+          <ul class="footer-links">
+            <li><a href="#packages">Classic Ceylon (7 Days)</a></li>
+            <li><a href="#packages">Highland Blue Train (5 Days)</a></li>
+            <li><a href="#packages">Tropical Waves & Surf (6 Days)</a></li>
+            <li><a href="#packages">Grand Island Odyssey (10 Days)</a></li>
+            <li><a href="#packages">Romantic Luxury Villas (8 Days)</a></li>
+            <li><a href="#tripPlanner">Custom Trip Builder</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Island Concierge</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>No. 42 Galle Face Court, Colombo 03, Sri Lanka</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 (11) 234-5678 / +94 77 123 4567</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>experience@serendibodyssey.lk</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>SLTDA Registration No: TS/2026/A-0482</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Serendib Odyssey (Pvt) Ltd. All Rights Reserved. Crafted with love in Sri Lanka 🇱🇰.
+        </div>
+        <div style="display:flex; gap:20px;">
+          <a href="#" style="color:inherit;">Privacy Policy</a>
+          <a href="#" style="color:inherit;">Terms & Conditions</a>
+          <a href="#" style="color:inherit;">Sustainable Tourism Charter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL 1: DESTINATION QUICK GUIDE MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="destModal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header-hero">
+        <img class="modal-hero-img" src="" alt="Destination preview">
+        <div class="modal-header-overlay">
+          <div>
+            <span class="eyebrow modal-dest-subtitle" style="color:var(--ceylon-gold);"></span>
+            <h3 class="modal-dest-title"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body modal-dest-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: DAY-BY-DAY ITINERARY VIEWER MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="itineraryModal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header-hero">
+        <img class="modal-hero-img" src="" alt="Package preview">
+        <div class="modal-header-overlay">
+          <div>
+            <span class="eyebrow modal-itinerary-subtitle" style="color:var(--ceylon-gold);"></span>
+            <h3 class="modal-itinerary-title"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body modal-itinerary-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 3: BOOKING & INQUIRY FORM MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width:640px;">
+      <button class="modal-close-btn" aria-label="Close modal" style="color:#333; background:rgba(0,0,0,0.06);">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="padding: 36px 32px 20px; border-bottom: 1px solid var(--border-light);">
+        <span class="eyebrow"><i class="fa-solid fa-plane-arrival"></i> Begin Your Journey</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.85rem; color: var(--primary-deep); margin-bottom: 6px;">
+          Personalized Trip Inquiry
+        </h3>
+        <p style="font-size: 0.92rem; color: var(--text-muted);">
+          Our local Sri Lankan destination designers will tailor every detail and send your custom proposal within 2 hours.
+        </p>
+      </div>
+      <div class="modal-body" style="padding: 28px 32px 36px;">
+        <form id="mainBookingForm" class="booking-form">
+          <div class="form-group">
+            <label for="bookName">Full Name *</label>
+            <input type="text" id="bookName" placeholder="e.g. Eleanor Vance" required>
+          </div>
+          <div class="form-group">
+            <label for="bookEmail">Email Address *</label>
+            <input type="email" id="bookEmail" placeholder="eleanor@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="bookPhone">WhatsApp / Phone Number</label>
+            <input type="tel" id="bookPhone" placeholder="+1 (555) 019-2834">
+          </div>
+          <div class="form-group">
+            <label for="bookDate">Anticipated Arrival Date *</label>
+            <input type="date" id="bookDate" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="bookingPackageSelect">Selected Tour Package / Style</label>
+            <select id="bookingPackageSelect">
+              <!-- Populated dynamically via JS -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookTravelersCount">Number of Travelers</label>
+            <select id="bookTravelersCount">
+              <option value="1">1 Traveler (Solo)</option>
+              <option value="2" selected>2 Travelers (Couple / Friends)</option>
+              <option value="3-4">3-4 Travelers (Family / Small Group)</option>
+              <option value="5+">5+ Travelers (Private Group)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookAccommodationLevel">Hotel Tier</label>
+            <select id="bookAccommodationLevel">
+              <option value="boutique">Boutique & Heritage (4-Star)</option>
+              <option value="luxury">5-Star Luxury & Pool Villas</option>
+              <option value="eco">Eco Nature & Forest Lodges</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="bookSpecialRequests">Special Wishes, Dietary or Specific Places</label>
+            <textarea id="bookSpecialRequests" rows="3" placeholder="Tell us about special occasions (honeymoon, anniversary), places you must see, or pacing preferences..."></textarea>
+          </div>
+          <div class="form-group full-width" style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="width:100%; height:52px;">
+              <i class="fa-solid fa-paper-plane"></i> Send Travel Inquiry (Free & Non-Binding)
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
